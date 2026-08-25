@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-20 22:57-0700\n"
+"POT-Creation-Date: 2026-08-21 17:56-0700\n"
 "PO-Revision-Date: 2026-08-11 09:59+0000\n"
 "Last-Translator: papewas <papewas@mailbox.org>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gelly/gelly/de/>\n"
@@ -18,45 +18,45 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2026.9.dev0\n"
 
-#: src/ui/album_detail.rs:40
+#: src/ui/album_detail.rs:35
 msgid "N/A"
 msgstr "Nicht Verfügbar"
 
-#: src/ui/album_detail.rs:169 src/ui/album_detail.rs:179
-#: src/ui/album_detail.rs:203 src/ui/artist_detail.rs:245 src/ui/playlist.rs:53
-#: src/ui/playlist_detail.rs:521 src/ui/playlist_detail.rs:531
-#: src/ui/playlist_detail.rs:555 src/ui/song_list.rs:159
+#: src/ui/album_detail.rs:164 src/ui/album_detail.rs:174
+#: src/ui/album_detail.rs:198 src/ui/artist_detail.rs:198 src/ui/playlist.rs:53
+#: src/ui/playlist_detail.rs:475 src/ui/playlist_detail.rs:485
+#: src/ui/playlist_detail.rs:509 src/ui/song_list.rs:159
 msgid "Audio model not initialized, please restart"
 msgstr "Audiomodell nicht initialisiert, bitte neustarten"
 
-#: src/ui/album_detail.rs:195 src/ui/artist_detail.rs:237
-#: src/ui/playlist_detail.rs:547
+#: src/ui/album_detail.rs:190 src/ui/artist_detail.rs:190
+#: src/ui/playlist_detail.rs:501
 msgid "1 song added to queue"
 msgid_plural "{} songs added to queue"
 msgstr[0] "1 Lied zur Warteschlange hinzugefügt"
 msgstr[1] "{} Lieder zur Warteschlange hinzugefügt"
 
-#: src/ui/album_detail.rs:277
+#: src/ui/album_detail.rs:236
 msgid "Album ID copied to clipboard"
 msgstr "Die Album-ID wurde in die Zwischenablage kopiert"
 
-#: src/ui/album_detail.rs:313
+#: src/ui/album_detail.rs:259
 msgid "Added album to playlist"
 msgstr "Das Album wurde der Wiedergabeliste hinzugefügt"
 
-#: src/ui/album_detail.rs:317
+#: src/ui/album_detail.rs:263
 msgid "Failed to add album to playlist"
 msgstr "Hinzufügen des Albums zur Wiedergabeliste fehlgeschlagen"
 
-#: src/ui/artist_detail.rs:164
+#: src/ui/artist_detail.rs:122
 msgid "Artist ID copied to clipboard"
 msgstr "Die Künstler*innen-ID wurde in die Zwischenablage kopiert"
 
-#: src/ui/artist_detail.rs:192
+#: src/ui/artist_detail.rs:145
 msgid "Added artist to playlist"
 msgstr "Künstler*in wurde der Wiedergabeliste hinzugefügt"
 
-#: src/ui/artist_detail.rs:196
+#: src/ui/artist_detail.rs:149
 msgid "Failed to add artist to playlist"
 msgstr ""
 "Hinzufügen der Künstlerin/des Künstlers zur Wiedergabeliste fehlgeschlagen"
@@ -67,7 +67,7 @@ msgstr "Hinzufügen zur Wiedergabeliste"
 
 #: src/ui/music_context_menu.rs:34 src/ui/music_context_menu.rs:87
 #: src/ui/playlist_dialogs.rs:20 src/ui/playlist_dialogs.rs:59
-#: resources/ui/setup.ui:123 resources/ui/setup.ui:186
+#: src/ui/window.rs:189 resources/ui/setup.ui:123 resources/ui/setup.ui:186
 msgid "Cancel"
 msgstr "Abbrechen"
 
@@ -109,7 +109,7 @@ msgstr "Zum Album"
 msgid "Go to Artist"
 msgstr "Zur Künstlerin/zum Künstler springen"
 
-#: src/ui/music_context_menu.rs:155 src/ui/stream_info_dialog.rs:120
+#: src/ui/music_context_menu.rs:155 src/ui/stream_info_dialog.rs:121
 msgid "Song Info"
 msgstr "Lied-Informationen"
 
@@ -117,24 +117,24 @@ msgstr "Lied-Informationen"
 msgid "Copy ID"
 msgstr "ID kopieren"
 
-#: src/ui/player_bar/common.rs:80
+#: src/ui/player_bar/common.rs:78
 msgid "Pause"
 msgstr "Pausieren"
 
-#: src/ui/player_bar/common.rs:83 resources/ui/album_detail.ui:119
-#: resources/ui/artist_detail.ui:52 resources/ui/playlist_detail.ui:101
+#: src/ui/player_bar/common.rs:81 resources/ui/album_detail.ui:120
+#: resources/ui/artist_detail.ui:53 resources/ui/playlist_detail.ui:102
 msgid "Play"
 msgstr "Wiedergabe"
 
-#: src/ui/player_bar/common.rs:93
+#: src/ui/player_bar/common.rs:91
 msgid "Unknown Artist"
 msgstr "Unbekannte*r Künstler*in"
 
-#: src/ui/player_bar/common.rs:253 src/ui/song.rs:257
+#: src/ui/player_bar/common.rs:253 src/ui/song.rs:232
 msgid "Added song to playlist"
 msgstr "Lied wurde der Wiedergabeliste hinzugefügt"
 
-#: src/ui/player_bar/common.rs:257 src/ui/song.rs:261
+#: src/ui/player_bar/common.rs:257 src/ui/song.rs:236
 msgid "Failed to add song to playlist"
 msgstr "Hinzufügen des Liedes zur Wiedergabeliste fehlgeschlagen"
 
@@ -156,40 +156,40 @@ msgstr "Leere Wiedergabeliste"
 msgid "Unable to load playlist"
 msgstr "Wiedergabeliste kann nicht geladen werden"
 
-#: src/ui/playlist_detail.rs:261 src/ui/playlist_list.rs:72
+#: src/ui/playlist_detail.rs:256 src/ui/playlist_list.rs:72
 msgid "Could not load playlist, please try again."
 msgstr ""
 "Die Wiedergabeliste kann nicht geladen werden, bitte versuchen Sie es erneut."
 
-#: src/ui/playlist_detail.rs:330
+#: src/ui/playlist_detail.rs:289
 msgid "Playlist ID copied to clipboard"
 msgstr "Die Wiedergabelisten-ID wurde in die Zwischenablage kopiert"
 
-#: src/ui/playlist_detail.rs:359
+#: src/ui/playlist_detail.rs:313
 msgid "Added songs to playlist"
 msgstr "Lieder wurden der Wiedergabeliste hinzugefügt"
 
-#: src/ui/playlist_detail.rs:363
+#: src/ui/playlist_detail.rs:317
 msgid "Failed to add songs to playlist"
 msgstr "Hinzufügen der Lieder zur Wiedergabeliste fehlgeschlagen"
 
-#: src/ui/playlist_detail.rs:459
+#: src/ui/playlist_detail.rs:413
 msgid "Failed to save playlist order."
 msgstr "Speichern der Wiedergabelisten-Reihenfolge fehlgeschlagen."
 
-#: src/ui/playlist_detail.rs:505
+#: src/ui/playlist_detail.rs:459
 msgid "Failed to modify playlist."
 msgstr "Die Wiedergabeliste konnte nicht geändert werden."
 
-#: src/ui/playlist_detail.rs:573
+#: src/ui/playlist_detail.rs:527
 msgid "Smart playlists cannot be deleted"
 msgstr "Intelligente Wiedergabeliste kann nicht gelöscht werden"
 
-#: src/ui/playlist_detail.rs:606
+#: src/ui/playlist_detail.rs:560
 msgid "Playlist deleted"
 msgstr "Wiedergabeliste gelöscht"
 
-#: src/ui/playlist_detail.rs:609
+#: src/ui/playlist_detail.rs:563
 msgid "Failed to delete playlist"
 msgstr "Löschen der Wiedergabeliste fehlgeschlagen"
 
@@ -274,105 +274,123 @@ msgstr "Ja"
 msgid "No"
 msgstr "Nein"
 
-#: src/ui/stream_info_dialog.rs:11 src/ui/stream_info_dialog.rs:52
-#: src/ui/stream_info_dialog.rs:73 src/ui/stream_info_dialog.rs:114
-#: src/ui/stream_info_dialog.rs:115
+#: src/ui/stream_info_dialog.rs:11 src/ui/stream_info_dialog.rs:53
+#: src/ui/stream_info_dialog.rs:74 src/ui/stream_info_dialog.rs:115
+#: src/ui/stream_info_dialog.rs:116
 msgid "Unknown"
 msgstr "Unbekannt"
 
-#: src/ui/stream_info_dialog.rs:49
+#: src/ui/stream_info_dialog.rs:50
 msgid "Backend"
 msgstr "Backend"
 
-#: src/ui/stream_info_dialog.rs:52
+#: src/ui/stream_info_dialog.rs:53
 msgid "Codec"
 msgstr "Codec"
 
-#: src/ui/stream_info_dialog.rs:54
+#: src/ui/stream_info_dialog.rs:55
 msgid "Container"
 msgstr "Container"
 
-#: src/ui/stream_info_dialog.rs:55 src/ui/stream_info_dialog.rs:77
+#: src/ui/stream_info_dialog.rs:56 src/ui/stream_info_dialog.rs:78
 msgid "None"
 msgstr "Keine"
 
-#: src/ui/stream_info_dialog.rs:58
+#: src/ui/stream_info_dialog.rs:59
 msgid "Sample Rate"
 msgstr "Abtastrate"
 
-#: src/ui/stream_info_dialog.rs:61
+#: src/ui/stream_info_dialog.rs:62
 msgid "Channels"
 msgstr "Kanäle"
 
-#: src/ui/stream_info_dialog.rs:64
+#: src/ui/stream_info_dialog.rs:65
 msgid "Bit Rate"
 msgstr "Bitrate"
 
-#: src/ui/stream_info_dialog.rs:67
+#: src/ui/stream_info_dialog.rs:68
 msgid "Encoder"
 msgstr "Encoder"
 
-#: src/ui/stream_info_dialog.rs:72
+#: src/ui/stream_info_dialog.rs:73
 msgid "Original Codec"
 msgstr "Originaler Codec"
 
-#: src/ui/stream_info_dialog.rs:76
+#: src/ui/stream_info_dialog.rs:77
 msgid "Original Container"
 msgstr "Originaler Container"
 
-#: src/ui/stream_info_dialog.rs:80
+#: src/ui/stream_info_dialog.rs:81
 msgid "Original Sample Rate"
 msgstr "Originale Abtastrate"
 
-#: src/ui/stream_info_dialog.rs:84
+#: src/ui/stream_info_dialog.rs:85
 msgid "Original Channels"
 msgstr "Originale Kanäle"
 
-#: src/ui/stream_info_dialog.rs:88
+#: src/ui/stream_info_dialog.rs:89
 msgid "Supports Direct Play"
 msgstr "Unterstützt Direct Play"
 
-#: src/ui/stream_info_dialog.rs:92
+#: src/ui/stream_info_dialog.rs:93
 msgid "Supports Direct Stream"
 msgstr "Unterstützt Direct Stream"
 
-#: src/ui/stream_info_dialog.rs:96
+#: src/ui/stream_info_dialog.rs:97
 msgid "Supports Transcoding"
 msgstr "Unterstützt Transkodierung"
 
-#: src/ui/stream_info_dialog.rs:102
+#: src/ui/stream_info_dialog.rs:103
 msgid "Original Bit Rate"
 msgstr "Originale Bitrate"
 
-#: src/ui/stream_info_dialog.rs:108
+#: src/ui/stream_info_dialog.rs:109
 msgid "File Size"
 msgstr "Dateigröße"
 
-#: src/ui/stream_info_dialog.rs:114
+#: src/ui/stream_info_dialog.rs:115
 msgid "Id"
 msgstr "ID"
 
-#: src/ui/stream_info_dialog.rs:115
+#: src/ui/stream_info_dialog.rs:116
 msgid "Path"
 msgstr "Pfad"
 
-#: src/ui/stream_info_dialog.rs:138
+#: src/ui/stream_info_dialog.rs:139
 msgid "Song Properties"
 msgstr "Lied-Eigenschaften"
 
-#: src/ui/stream_info_dialog.rs:145
+#: src/ui/stream_info_dialog.rs:146
 msgid "Local Properties"
 msgstr "Lokale Eigenschaften"
 
-#: src/ui/stream_info_dialog.rs:152
+#: src/ui/stream_info_dialog.rs:153
 msgid "Remote Properties"
 msgstr "Remote-Eigenschafen"
 
-#: src/ui/window.rs:181
+#: src/ui/window.rs:188 resources/ui/window.ui:415
+#, fuzzy
+#| msgid "Choose Library"
+msgid "Change Library"
+msgstr "Bibliothek aussuchen"
+
+#: src/ui/window.rs:189
+#, fuzzy
+#| msgid "Play Selected"
+msgid "Select"
+msgstr "Ausgewähltes abspielen"
+
+#: src/ui/window.rs:221
+#, fuzzy
+#| msgid "Failed to load libraries"
+msgid "Failed to fetch libraries"
+msgstr "Bibliotheken konnten nicht geladen werden"
+
+#: src/ui/window.rs:231
 msgid "Logged out"
 msgstr "Abgemeldet"
 
-#: src/ui/window.rs:309
+#: src/ui/window.rs:359
 msgid "all genres"
 msgstr "Alle Genres"
 
@@ -384,7 +402,7 @@ msgstr "Fehlendes Albumcover"
 msgid "tracks"
 msgstr "Titel"
 
-#: resources/ui/album_detail.ui:145 resources/ui/artist_detail.ui:79
+#: resources/ui/album_detail.ui:147 resources/ui/artist_detail.ui:81
 msgid "More Actions"
 msgstr "Weitere Aktionen"
 
@@ -416,15 +434,15 @@ msgstr "Keine Liedtexte verfügbar"
 msgid "Playback Mode"
 msgstr "Wiedergabe-Modus"
 
-#: resources/ui/playlist_detail.ui:127
+#: resources/ui/playlist_detail.ui:129
 msgid "More actions"
 msgstr "Weitere Aktionen"
 
-#: resources/ui/playlist_detail.ui:138
+#: resources/ui/playlist_detail.ui:140
 msgid "Delete playlist"
 msgstr "Wiedergabeliste löschen"
 
-#: resources/ui/playlist_detail.ui:152
+#: resources/ui/playlist_detail.ui:154
 msgid "Playlist is Empty"
 msgstr "Wiedergabeliste ist leer"
 
@@ -639,15 +657,15 @@ msgstr "Suche"
 msgid "Show Favorites"
 msgstr "Favoriten anzeigen"
 
-#: resources/ui/shortcuts_dialog.ui:35 resources/ui/window.ui:421
+#: resources/ui/shortcuts_dialog.ui:35 resources/ui/window.ui:425
 msgid "Preferences"
 msgstr "Einstellungen"
 
-#: resources/ui/shortcuts_dialog.ui:41 resources/ui/window.ui:425
+#: resources/ui/shortcuts_dialog.ui:41 resources/ui/window.ui:429
 msgid "Keyboard Shortcuts"
 msgstr "Tastenkürzel"
 
-#: resources/ui/shortcuts_dialog.ui:47 resources/ui/window.ui:437
+#: resources/ui/shortcuts_dialog.ui:47 resources/ui/window.ui:441
 msgid "Quit"
 msgstr "Beenden"
 
@@ -767,15 +785,15 @@ msgstr "Als Wiedergabeliste speichern"
 msgid "Request Rescan"
 msgstr "Erneuten Scan anfordern"
 
-#: resources/ui/window.ui:415
+#: resources/ui/window.ui:419
 msgid "Clear Image Cache"
 msgstr "Bild-Cache leeren"
 
-#: resources/ui/window.ui:429
+#: resources/ui/window.ui:433
 msgid "About Gelly"
 msgstr "Über Gelly"
 
-#: resources/ui/window.ui:433
+#: resources/ui/window.ui:437
 msgid "Logout"
 msgstr "Abmelden"
 
