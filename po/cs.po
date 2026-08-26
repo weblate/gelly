@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-20 22:57-0700\n"
+"POT-Creation-Date: 2026-08-21 17:56-0700\n"
 "PO-Revision-Date: 2026-06-13 19:01+0000\n"
 "Last-Translator: Tuan Dat Pham <tuandatdavid@proton.me>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/gelly/gelly/cs/>\n"
@@ -18,54 +18,54 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
 "X-Generator: Weblate 2026.7.dev0\n"
 
-#: src/ui/album_detail.rs:40
+#: src/ui/album_detail.rs:35
 msgid "N/A"
 msgstr "—"
 
-#: src/ui/album_detail.rs:169 src/ui/album_detail.rs:179
-#: src/ui/album_detail.rs:203 src/ui/artist_detail.rs:245 src/ui/playlist.rs:53
-#: src/ui/playlist_detail.rs:521 src/ui/playlist_detail.rs:531
-#: src/ui/playlist_detail.rs:555 src/ui/song_list.rs:159
+#: src/ui/album_detail.rs:164 src/ui/album_detail.rs:174
+#: src/ui/album_detail.rs:198 src/ui/artist_detail.rs:198 src/ui/playlist.rs:53
+#: src/ui/playlist_detail.rs:475 src/ui/playlist_detail.rs:485
+#: src/ui/playlist_detail.rs:509 src/ui/song_list.rs:159
 msgid "Audio model not initialized, please restart"
 msgstr "Audio model neinicializován, prosím zrestartujte aplikaci"
 
-#: src/ui/album_detail.rs:195 src/ui/artist_detail.rs:237
-#: src/ui/playlist_detail.rs:547
+#: src/ui/album_detail.rs:190 src/ui/artist_detail.rs:190
+#: src/ui/playlist_detail.rs:501
 msgid "1 song added to queue"
 msgid_plural "{} songs added to queue"
 msgstr[0] "1 písnička přidána do fronty"
 msgstr[1] "{} písničky přidány do fronty"
 msgstr[2] "{} písniček přidány do fronty"
 
-#: src/ui/album_detail.rs:277
+#: src/ui/album_detail.rs:236
 #, fuzzy
 #| msgid "Quick connect code copied to clipboard"
 msgid "Album ID copied to clipboard"
 msgstr "Kód pro rychlé připojení zkopírováno do schránky"
 
-#: src/ui/album_detail.rs:313
+#: src/ui/album_detail.rs:259
 #, fuzzy
 #| msgid "Add to Playlist"
 msgid "Added album to playlist"
 msgstr "Přidat do playlistu"
 
-#: src/ui/album_detail.rs:317
+#: src/ui/album_detail.rs:263
 msgid "Failed to add album to playlist"
 msgstr ""
 
-#: src/ui/artist_detail.rs:164
+#: src/ui/artist_detail.rs:122
 #, fuzzy
 #| msgid "Quick connect code copied to clipboard"
 msgid "Artist ID copied to clipboard"
 msgstr "Kód pro rychlé připojení zkopírováno do schránky"
 
-#: src/ui/artist_detail.rs:192
+#: src/ui/artist_detail.rs:145
 #, fuzzy
 #| msgid "Add to Playlist"
 msgid "Added artist to playlist"
 msgstr "Přidat do playlistu"
 
-#: src/ui/artist_detail.rs:196
+#: src/ui/artist_detail.rs:149
 msgid "Failed to add artist to playlist"
 msgstr ""
 
@@ -75,7 +75,7 @@ msgstr "Přidat do playlistu"
 
 #: src/ui/music_context_menu.rs:34 src/ui/music_context_menu.rs:87
 #: src/ui/playlist_dialogs.rs:20 src/ui/playlist_dialogs.rs:59
-#: resources/ui/setup.ui:123 resources/ui/setup.ui:186
+#: src/ui/window.rs:189 resources/ui/setup.ui:123 resources/ui/setup.ui:186
 msgid "Cancel"
 msgstr "Zrušit"
 
@@ -121,7 +121,7 @@ msgstr "Žádná alba"
 msgid "Go to Artist"
 msgstr "Žádní umělci"
 
-#: src/ui/music_context_menu.rs:155 src/ui/stream_info_dialog.rs:120
+#: src/ui/music_context_menu.rs:155 src/ui/stream_info_dialog.rs:121
 #, fuzzy
 #| msgid "Stream Info"
 msgid "Song Info"
@@ -131,26 +131,26 @@ msgstr "Info o streamu"
 msgid "Copy ID"
 msgstr "Zkopírovat ID"
 
-#: src/ui/player_bar/common.rs:80
+#: src/ui/player_bar/common.rs:78
 msgid "Pause"
 msgstr "Pozastavit"
 
-#: src/ui/player_bar/common.rs:83 resources/ui/album_detail.ui:119
-#: resources/ui/artist_detail.ui:52 resources/ui/playlist_detail.ui:101
+#: src/ui/player_bar/common.rs:81 resources/ui/album_detail.ui:120
+#: resources/ui/artist_detail.ui:53 resources/ui/playlist_detail.ui:102
 msgid "Play"
 msgstr "Zahrát"
 
-#: src/ui/player_bar/common.rs:93
+#: src/ui/player_bar/common.rs:91
 msgid "Unknown Artist"
 msgstr "Neznámý umělec"
 
-#: src/ui/player_bar/common.rs:253 src/ui/song.rs:257
+#: src/ui/player_bar/common.rs:253 src/ui/song.rs:232
 #, fuzzy
 #| msgid "Add to Playlist"
 msgid "Added song to playlist"
 msgstr "Přidat do playlistu"
 
-#: src/ui/player_bar/common.rs:257 src/ui/song.rs:261
+#: src/ui/player_bar/common.rs:257 src/ui/song.rs:236
 msgid "Failed to add song to playlist"
 msgstr ""
 
@@ -175,45 +175,45 @@ msgstr "Prázdný playlist"
 msgid "Unable to load playlist"
 msgstr "Smazat playlist"
 
-#: src/ui/playlist_detail.rs:261 src/ui/playlist_list.rs:72
+#: src/ui/playlist_detail.rs:256 src/ui/playlist_list.rs:72
 msgid "Could not load playlist, please try again."
 msgstr ""
 
-#: src/ui/playlist_detail.rs:330
+#: src/ui/playlist_detail.rs:289
 #, fuzzy
 #| msgid "Quick connect code copied to clipboard"
 msgid "Playlist ID copied to clipboard"
 msgstr "Kód pro rychlé připojení zkopírováno do schránky"
 
-#: src/ui/playlist_detail.rs:359
+#: src/ui/playlist_detail.rs:313
 #, fuzzy
 #| msgid "Add to Playlist"
 msgid "Added songs to playlist"
 msgstr "Přidat do playlistu"
 
-#: src/ui/playlist_detail.rs:363
+#: src/ui/playlist_detail.rs:317
 msgid "Failed to add songs to playlist"
 msgstr ""
 
-#: src/ui/playlist_detail.rs:459
+#: src/ui/playlist_detail.rs:413
 msgid "Failed to save playlist order."
 msgstr ""
 
-#: src/ui/playlist_detail.rs:505
+#: src/ui/playlist_detail.rs:459
 msgid "Failed to modify playlist."
 msgstr ""
 
-#: src/ui/playlist_detail.rs:573
+#: src/ui/playlist_detail.rs:527
 msgid "Smart playlists cannot be deleted"
 msgstr "Dynamické playlisty se nedají smazat"
 
-#: src/ui/playlist_detail.rs:606
+#: src/ui/playlist_detail.rs:560
 #, fuzzy
 #| msgid "Play Selected"
 msgid "Playlist deleted"
 msgstr "Přehrát vybrané"
 
-#: src/ui/playlist_detail.rs:609
+#: src/ui/playlist_detail.rs:563
 #, fuzzy
 #| msgid "Delete playlist"
 msgid "Failed to delete playlist"
@@ -304,105 +304,123 @@ msgstr "Ano"
 msgid "No"
 msgstr "Ne"
 
-#: src/ui/stream_info_dialog.rs:11 src/ui/stream_info_dialog.rs:52
-#: src/ui/stream_info_dialog.rs:73 src/ui/stream_info_dialog.rs:114
-#: src/ui/stream_info_dialog.rs:115
+#: src/ui/stream_info_dialog.rs:11 src/ui/stream_info_dialog.rs:53
+#: src/ui/stream_info_dialog.rs:74 src/ui/stream_info_dialog.rs:115
+#: src/ui/stream_info_dialog.rs:116
 msgid "Unknown"
 msgstr "Neznámý"
 
-#: src/ui/stream_info_dialog.rs:49
+#: src/ui/stream_info_dialog.rs:50
 msgid "Backend"
 msgstr "Backend"
 
-#: src/ui/stream_info_dialog.rs:52
+#: src/ui/stream_info_dialog.rs:53
 msgid "Codec"
 msgstr "Kodek"
 
-#: src/ui/stream_info_dialog.rs:54
+#: src/ui/stream_info_dialog.rs:55
 msgid "Container"
 msgstr "Kontejner"
 
-#: src/ui/stream_info_dialog.rs:55 src/ui/stream_info_dialog.rs:77
+#: src/ui/stream_info_dialog.rs:56 src/ui/stream_info_dialog.rs:78
 msgid "None"
 msgstr "Nic"
 
-#: src/ui/stream_info_dialog.rs:58
+#: src/ui/stream_info_dialog.rs:59
 msgid "Sample Rate"
 msgstr "Vzorkovací frekvence"
 
-#: src/ui/stream_info_dialog.rs:61
+#: src/ui/stream_info_dialog.rs:62
 msgid "Channels"
 msgstr "Kanály"
 
-#: src/ui/stream_info_dialog.rs:64
+#: src/ui/stream_info_dialog.rs:65
 msgid "Bit Rate"
 msgstr "Přenosová rychlost"
 
-#: src/ui/stream_info_dialog.rs:67
+#: src/ui/stream_info_dialog.rs:68
 msgid "Encoder"
 msgstr "Enkodér"
 
-#: src/ui/stream_info_dialog.rs:72
+#: src/ui/stream_info_dialog.rs:73
 msgid "Original Codec"
 msgstr "Originální kodek"
 
-#: src/ui/stream_info_dialog.rs:76
+#: src/ui/stream_info_dialog.rs:77
 msgid "Original Container"
 msgstr "Originální kontejner"
 
-#: src/ui/stream_info_dialog.rs:80
+#: src/ui/stream_info_dialog.rs:81
 msgid "Original Sample Rate"
 msgstr "Originální vzorková frekvence"
 
-#: src/ui/stream_info_dialog.rs:84
+#: src/ui/stream_info_dialog.rs:85
 msgid "Original Channels"
 msgstr "Originální kanály"
 
-#: src/ui/stream_info_dialog.rs:88
+#: src/ui/stream_info_dialog.rs:89
 msgid "Supports Direct Play"
 msgstr "Podporuje direct play"
 
-#: src/ui/stream_info_dialog.rs:92
+#: src/ui/stream_info_dialog.rs:93
 msgid "Supports Direct Stream"
 msgstr "Podporuje direct stream"
 
-#: src/ui/stream_info_dialog.rs:96
+#: src/ui/stream_info_dialog.rs:97
 msgid "Supports Transcoding"
 msgstr "Podporuje transkódování"
 
-#: src/ui/stream_info_dialog.rs:102
+#: src/ui/stream_info_dialog.rs:103
 msgid "Original Bit Rate"
 msgstr "Originální přenosová rychlost"
 
-#: src/ui/stream_info_dialog.rs:108
+#: src/ui/stream_info_dialog.rs:109
 msgid "File Size"
 msgstr "Velikost souboru"
 
-#: src/ui/stream_info_dialog.rs:114
+#: src/ui/stream_info_dialog.rs:115
 msgid "Id"
 msgstr ""
 
-#: src/ui/stream_info_dialog.rs:115
+#: src/ui/stream_info_dialog.rs:116
 msgid "Path"
 msgstr ""
 
-#: src/ui/stream_info_dialog.rs:138
+#: src/ui/stream_info_dialog.rs:139
 msgid "Song Properties"
 msgstr ""
 
-#: src/ui/stream_info_dialog.rs:145
+#: src/ui/stream_info_dialog.rs:146
 msgid "Local Properties"
 msgstr ""
 
-#: src/ui/stream_info_dialog.rs:152
+#: src/ui/stream_info_dialog.rs:153
 msgid "Remote Properties"
 msgstr ""
 
-#: src/ui/window.rs:181
+#: src/ui/window.rs:188 resources/ui/window.ui:415
+#, fuzzy
+#| msgid "Choose Library"
+msgid "Change Library"
+msgstr "Zvolit knihovnu"
+
+#: src/ui/window.rs:189
+#, fuzzy
+#| msgid "Play Selected"
+msgid "Select"
+msgstr "Přehrát vybrané"
+
+#: src/ui/window.rs:221
+#, fuzzy
+#| msgid "Delete playlist"
+msgid "Failed to fetch libraries"
+msgstr "Smazat playlist"
+
+#: src/ui/window.rs:231
 msgid "Logged out"
 msgstr "Jste odhlášen/a"
 
-#: src/ui/window.rs:309
+#: src/ui/window.rs:359
 msgid "all genres"
 msgstr ""
 
@@ -414,7 +432,7 @@ msgstr "Chybějící obrázek alba"
 msgid "tracks"
 msgstr "stopáže"
 
-#: resources/ui/album_detail.ui:145 resources/ui/artist_detail.ui:79
+#: resources/ui/album_detail.ui:147 resources/ui/artist_detail.ui:81
 msgid "More Actions"
 msgstr "Další možnosti"
 
@@ -446,15 +464,15 @@ msgstr "Text písně není dostupný"
 msgid "Playback Mode"
 msgstr "Přehrávání"
 
-#: resources/ui/playlist_detail.ui:127
+#: resources/ui/playlist_detail.ui:129
 msgid "More actions"
 msgstr "Více akcí"
 
-#: resources/ui/playlist_detail.ui:138
+#: resources/ui/playlist_detail.ui:140
 msgid "Delete playlist"
 msgstr "Smazat playlist"
 
-#: resources/ui/playlist_detail.ui:152
+#: resources/ui/playlist_detail.ui:154
 msgid "Playlist is Empty"
 msgstr "Playlist je prázdný"
 
@@ -664,15 +682,15 @@ msgstr "Hledat"
 msgid "Show Favorites"
 msgstr "Zobrazit oblíbené"
 
-#: resources/ui/shortcuts_dialog.ui:35 resources/ui/window.ui:421
+#: resources/ui/shortcuts_dialog.ui:35 resources/ui/window.ui:425
 msgid "Preferences"
 msgstr "Nastavení"
 
-#: resources/ui/shortcuts_dialog.ui:41 resources/ui/window.ui:425
+#: resources/ui/shortcuts_dialog.ui:41 resources/ui/window.ui:429
 msgid "Keyboard Shortcuts"
 msgstr "Klávesové zkratky"
 
-#: resources/ui/shortcuts_dialog.ui:47 resources/ui/window.ui:437
+#: resources/ui/shortcuts_dialog.ui:47 resources/ui/window.ui:441
 msgid "Quit"
 msgstr "Ukončit"
 
@@ -792,15 +810,15 @@ msgstr "Uložit jako playlist"
 msgid "Request Rescan"
 msgstr "Znovu proskenovat"
 
-#: resources/ui/window.ui:415
+#: resources/ui/window.ui:419
 msgid "Clear Image Cache"
 msgstr "Vyčistit mezipaměť obrázků"
 
-#: resources/ui/window.ui:429
+#: resources/ui/window.ui:433
 msgid "About Gelly"
 msgstr "O aplikaci Gelly"
 
-#: resources/ui/window.ui:433
+#: resources/ui/window.ui:437
 msgid "Logout"
 msgstr "Odhlásit se"
 
