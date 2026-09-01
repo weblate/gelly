@@ -1,9 +1,20 @@
+use diacritics::remove_diacritics;
 use gtk::{PropertyExpression, glib, prelude::*};
 
 pub fn create_string_filter<T: glib::object::IsA<glib::Object> + 'static>(
     property: &str,
 ) -> gtk::StringFilter {
-    let expr = PropertyExpression::new(T::static_type(), None::<&gtk::Expression>, property);
+    let expr = PropertyExpression::new(T::static_type(), None::<&gtk::Expression>, property)
+        .chain_closure::<glib::GString>(glib::closure!(
+        |_: Option<glib::Object>, value: &str| {
+            if value.is_ascii() {
+                glib::GString::from(value)
+            } else {
+                let normalized = remove_diacritics(value);
+                glib::GString::from(normalized.as_str())
+            }
+        }
+    ));
     let filter = gtk::StringFilter::new(Some(expr));
     filter.set_ignore_case(true);
     filter.set_match_mode(gtk::StringFilterMatchMode::Substring);

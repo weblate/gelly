@@ -1,3 +1,4 @@
+use diacritics::remove_diacritics;
 use gtk::{glib::prelude::*, prelude::*};
 use log::warn;
 use num_enum::{IntoPrimitive, TryFromPrimitive};
@@ -75,7 +76,7 @@ pub trait TopPage {
         let weak_self = self.downgrade();
         search_entry.connect_search_changed(move |entry| {
             if let Some(list_view) = weak_self.upgrade() {
-                list_view.search_changed(&entry.text());
+                list_view.search_changed(&remove_diacritics(&entry.text()));
                 list_view.reset_position();
             }
         });
