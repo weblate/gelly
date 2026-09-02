@@ -10,17 +10,17 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-21 17:56-0700\n"
-"PO-Revision-Date: 2026-06-19 22:57+1100\n"
-"Last-Translator: Aleksandr Shamaraev <shad@altlinux.org>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/gelly/gelly/ru/"
-">\n"
+"PO-Revision-Date: 2026-09-03 08:01+0000\n"
+"Last-Translator: Anatoly Bogomolov <tolya.bogomolov2019@gmail.com>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/gelly/gelly/ru/>"
+"\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Weblate 2026.9.dev0\n"
 
 #: src/ui/album_detail.rs:35
 msgid "N/A"
@@ -77,21 +77,19 @@ msgstr "Отменить"
 
 #: src/ui/music_context_menu.rs:34
 msgid "Add"
-msgstr ""
+msgstr "Добавить"
 
 #: src/ui/music_context_menu.rs:59
 msgid "No playlists available. Please create a playlist first."
 msgstr ""
 
 #: src/ui/music_context_menu.rs:86
-#, fuzzy
-#| msgid "Unable to load playlist"
 msgid "Song already in playlist"
-msgstr "Не удалось загрузить плейлист"
+msgstr "Песня уже в плейлисте"
 
 #: src/ui/music_context_menu.rs:87
 msgid "Add Anyway"
-msgstr ""
+msgstr "Всё равно добавить"
 
 #: src/ui/music_context_menu.rs:112
 msgid "Queue Next"
@@ -106,22 +104,16 @@ msgid "Remove from Playlist"
 msgstr "Удалить из плейлиста"
 
 #: src/ui/music_context_menu.rs:139
-#, fuzzy
-#| msgid "No Albums"
 msgid "Go to Album"
-msgstr "Нет альбомов"
+msgstr "Перейти к альбому"
 
 #: src/ui/music_context_menu.rs:146
-#, fuzzy
-#| msgid "No Artists"
 msgid "Go to Artist"
-msgstr "Нет исполнителя"
+msgstr "Перейти к исполнителю"
 
 #: src/ui/music_context_menu.rs:155 src/ui/stream_info_dialog.rs:121
-#, fuzzy
-#| msgid "Stream Info"
 msgid "Song Info"
-msgstr "Информация о потоке"
+msgstr "Информация о песне"
 
 #: src/ui/music_context_menu.rs:160
 msgid "Copy ID"
@@ -359,29 +351,27 @@ msgstr "Размер файла"
 
 #: src/ui/stream_info_dialog.rs:115
 msgid "Id"
-msgstr ""
+msgstr "Id"
 
 #: src/ui/stream_info_dialog.rs:116
 msgid "Path"
-msgstr ""
+msgstr "Путь"
 
 #: src/ui/stream_info_dialog.rs:139
 msgid "Song Properties"
-msgstr ""
+msgstr "Свойства песни"
 
 #: src/ui/stream_info_dialog.rs:146
 msgid "Local Properties"
-msgstr ""
+msgstr "Локальные свойства"
 
 #: src/ui/stream_info_dialog.rs:153
 msgid "Remote Properties"
-msgstr ""
+msgstr "Свойства на сервере"
 
 #: src/ui/window.rs:188 resources/ui/window.ui:415
-#, fuzzy
-#| msgid "Choose Library"
 msgid "Change Library"
-msgstr "Выбрать медиатеку"
+msgstr "Изменить медиатеку"
 
 #: src/ui/window.rs:189
 #, fuzzy
@@ -401,7 +391,7 @@ msgstr "Вышел из системы"
 
 #: src/ui/window.rs:359
 msgid "all genres"
-msgstr ""
+msgstr "все жанры"
 
 #: resources/ui/album_art.ui:33
 msgid "Missing album art"
@@ -424,6 +414,9 @@ msgid ""
 "Performing initial library download, this may take a moment. The library "
 "will be cached for subsequent use."
 msgstr ""
+"Производится первоначальное скачивание библиотеки, что может занять "
+"некоторое время. Библиотека будет закеширована для последующего "
+"использования."
 
 #: resources/ui/artist_detail.ui:41
 msgid "Artist Name"
@@ -510,7 +503,7 @@ msgstr "Воспроизведение"
 
 #: resources/ui/preferences.ui:45
 msgid "Uninterrupted playback of consecutive tracks."
-msgstr ""
+msgstr "Непрерывное воспроизведение последовательных треков."
 
 #: resources/ui/preferences.ui:50
 msgid "Inhibit Suspend"
@@ -738,7 +731,7 @@ msgstr "Показать очередь"
 
 #: resources/ui/window.ui:160
 msgid "Search and Genres"
-msgstr ""
+msgstr "Поиск и жанры"
 
 #: resources/ui/window.ui:166
 msgid "Sort"
@@ -754,7 +747,7 @@ msgstr "Поиск..."
 
 #: resources/ui/window.ui:231
 msgid "Reset"
-msgstr ""
+msgstr "Сбросить"
 
 #: resources/ui/window.ui:253
 msgid "Favorites"
@@ -812,7 +805,7 @@ msgstr "Выйти"
 #: resources/ui/player_bar/compact_player_bar.ui:110
 #: resources/ui/player_bar/full_player_bar.ui:198
 msgid "Lyrics"
-msgstr ""
+msgstr "Текст песни"
 
 #: resources/ui/player_bar/big_player.ui:179
 #: resources/ui/player_bar/compact_player_bar.ui:120
@@ -825,12 +818,12 @@ msgstr "Избранное"
 #: resources/ui/player_bar/big_player.ui:199
 #: resources/ui/player_bar/full_player_bar.ui:245
 msgid "Volume"
-msgstr ""
+msgstr "Громкость"
 
 #: resources/ui/player_bar/big_player.ui:214
 #: resources/ui/player_bar/full_player_bar.ui:232
 msgid "Song Menu"
-msgstr ""
+msgstr "Меню песни"
 
 #~ msgid "Song ID copied to clipboard"
 #~ msgstr "ID песни скопирован в буфер обмена"
