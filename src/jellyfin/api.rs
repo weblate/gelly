@@ -236,6 +236,12 @@ pub struct PlaybackReport {
     pub position_ticks: u64,
 }
 
+impl PlaybackReport {
+    pub fn position_seconds(&self) -> u64 {
+        self.position_ticks / 10_000_000
+    }
+}
+
 #[derive(Clone, Debug, Deserialize)]
 #[serde(rename_all = "PascalCase")]
 pub struct LyricsResponse {

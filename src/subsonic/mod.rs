@@ -685,9 +685,9 @@ impl Subsonic {
         state: &PlaybackReportStatus,
     ) -> Result<(), BackendError> {
         let submission = match state {
-            PlaybackReportStatus::Started => "false",
             PlaybackReportStatus::InProgress => return Ok(()),
-            PlaybackReportStatus::Stopped => "true",
+            PlaybackReportStatus::Stopped if report.position_seconds() >= 5 => "true",
+            PlaybackReportStatus::Stopped | PlaybackReportStatus::Started => "false",
         };
 
         debug!(
