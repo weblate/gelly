@@ -154,12 +154,6 @@ pub fn get_subsonic_auth_mode() -> SubsonicAuthMode {
     SubsonicAuthMode::from_str(settings().string("subsonic-auth-mode").as_str())
 }
 
-pub fn set_subsonic_auth_mode(mode: SubsonicAuthMode) {
-    settings()
-        .set_string("subsonic-auth-mode", mode.as_str())
-        .expect("Failed to set subsonic auth mode");
-}
-
 fn clear_credentials(backend_type: BackendType) -> Result<(), Box<Error>> {
     let host = settings().string("hostname").to_owned();
     let identifier = settings().string(backend_type.id_key()).to_owned();
