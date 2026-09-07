@@ -4,6 +4,8 @@ use oo7::{Error, Keyring};
 use std::cell::RefCell;
 use uuid::Uuid;
 
+use crate::subsonic::SubsonicAuthMode;
+
 pub static APP_ID: &str = "io.m51.Gelly";
 pub static VERSION: &str = env!("CARGO_PKG_VERSION");
 
@@ -146,6 +148,16 @@ pub fn store_subsonic_password(
 
 pub fn retrieve_subsonic_password(host: &str, username: &str) -> Option<String> {
     retrieve_credentials(host, username, BackendType::Subsonic)
+}
+
+pub fn get_subsonic_auth_mode() -> SubsonicAuthMode {
+    SubsonicAuthMode::from_str(settings().string("subsonic-auth-mode").as_str())
+}
+
+pub fn set_subsonic_auth_mode(mode: SubsonicAuthMode) {
+    settings()
+        .set_string("subsonic-auth-mode", mode.as_str())
+        .expect("Failed to set subsonic auth mode");
 }
 
 fn clear_credentials(backend_type: BackendType) -> Result<(), Box<Error>> {

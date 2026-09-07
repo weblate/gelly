@@ -1,3 +1,4 @@
+use std::fmt::Write;
 use std::time::Duration;
 
 use log::{debug, warn};
@@ -22,12 +23,39 @@ const SUBSONIC_CLIENT_NAME: &str = "gelly";
 const ALL_FOLDERS_LIBRARY_ID: &str = "__gelly_subsonic_all__";
 const ALBUM_LIST_PAGE_SIZE: u32 = 500;
 
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+pub enum SubsonicAuthMode {
+    #[default]
+    Token,
+    LegacyPassword,
+}
+
+impl SubsonicAuthMode {
+    pub fn as_str(self) -> &'static str {
+        match self {
+            Self::Token => "token",
+            Self::LegacyPassword => "legacy-password",
+        }
+    }
+    pub fn from_str(value: &str) -> Self {
+        match value {
+            "token" => Self::Token,
+            "legacy-password" => Self::LegacyPassword,
+            other => {
+                log::warn!("Unknown Subsonic auth mode: {}, using token", other);
+                Self::Token
+            }
+        }
+    }
+}
+
 #[derive(Debug, Clone)]
 pub struct Subsonic {
     client: Client,
     pub host: String,
     pub username: String,
     pub password: String,
+    pub auth_mode: SubsonicAuthMode,
 }
 
 struct AlbumFallback {
@@ -56,6 +84,7 @@ impl Subsonic {
             host: host.to_string(),
             username: username.to_string(),
             password: password.to_string(),
+            auth_mode: config::get_subsonic_auth_mode(),
         }
     }
 
@@ -793,22 +822,33 @@ impl Subsonic {
     }
 
     fn auth_params(&self) -> Vec<(String, String)> {
-        let salt: String = rand::rng()
-            .sample_iter(rand::distr::Alphanumeric)
-            .take(16)
-            .map(char::from)
-            .collect();
-
-        let token = format!("{:x}", md5::compute(format!("{}{}", self.password, salt)));
-
-        vec![
+        let mut params = vec![
             ("u".to_string(), self.username.clone()),
-            ("t".to_string(), token),
-            ("s".to_string(), salt),
             ("v".to_string(), SUBSONIC_API_VERSION.to_string()),
             ("c".to_string(), SUBSONIC_CLIENT_NAME.to_string()),
             ("f".to_string(), "json".to_string()),
-        ]
+        ];
+        match self.auth_mode {
+            SubsonicAuthMode::Token => {
+                let salt: String = rand::rng()
+                    .sample_iter(rand::distr::Alphanumeric)
+                    .take(16)
+                    .map(char::from)
+                    .collect();
+                let token = format!("{:x}", md5::compute(format!("{}{}", self.password, salt)));
+                params.push(("t".to_string(), token));
+                params.push(("s".to_string(), salt));
+            }
+            SubsonicAuthMode::LegacyPassword => {
+                let mut encoded = String::from("enc:");
+                for byte in self.password.as_bytes() {
+                    write!(&mut encoded, "{byte:02x}")
+                        .expect("writing to a string should never fail");
+                }
+                params.push(("p".to_string(), encoded));
+            }
+        }
+        params
     }
 
     fn rest_url(&self, endpoint: &str) -> Url {
