@@ -130,7 +130,7 @@
             <child>
               <object class="GtkButton" id="prev_button">
                 <property name="icon-name">media-skip-backward-symbolic</property>
-                <property name="tooltip-text">Previous</property>
+                <property name="tooltip-text" translatable="yes">Previous</property>
                 <property name="valign">center</property>
                 <style>
                   <class name="circular"/>
@@ -140,7 +140,7 @@
             <child>
               <object class="GtkButton" id="play_pause_button">
                 <property name="icon-name">media-playback-start-symbolic</property>
-                <property name="tooltip-text">Play</property>
+                <property name="tooltip-text" translatable="yes">Play</property>
                 <style>
                   <class name="pill"/>
                 </style>
@@ -149,7 +149,7 @@
             <child>
               <object class="GtkButton" id="next_button">
                 <property name="icon-name">media-skip-forward-symbolic</property>
-                <property name="tooltip-text">Next</property>
+                <property name="tooltip-text" translatable="yes">Next</property>
                 <property name="valign">center</property>
                 <style>
                   <class name="circular"/>
