@@ -7,7 +7,7 @@ use crate::config::{
 };
 use crate::i18n::tr;
 use crate::jellyfin::{Jellyfin, initiate_quick_connect, quick_connect_status};
-use crate::subsonic::Subsonic;
+use crate::subsonic::{Subsonic, SubsonicAuthMode};
 use crate::ui::widget_ext::WidgetApplicationExt;
 use adw::prelude::*;
 use adw::subclass::prelude::ObjectSubclassIsExt;
@@ -39,6 +39,28 @@ enum ConnectionAttemptError {
 impl Setup {
     pub fn new() -> Self {
         Object::builder().build()
+    }
+
+    fn setup_bindings(&self) {
+        settings()
+            .bind(
+                "subsonic-auth-mode",
+                &*self.imp().subsonic_legacy_auth_row,
+                "active",
+            )
+            .mapping(|value, _| {
+                let mode = SubsonicAuthMode::from_str(value.str()?);
+                Some((mode == SubsonicAuthMode::LegacyPassword).to_value())
+            })
+            .set_mapping(|value, _| {
+                let mode = if value.get::<bool>().ok()? {
+                    SubsonicAuthMode::LegacyPassword
+                } else {
+                    SubsonicAuthMode::Token
+                };
+                Some(mode.as_str().to_variant())
+            })
+            .build();
     }
 
     fn select_page(&self) {
@@ -475,6 +497,8 @@ mod imp {
         #[template_child]
         pub password_entry: TemplateChild<adw::PasswordEntryRow>,
         #[template_child]
+        pub subsonic_legacy_auth_row: TemplateChild<adw::SwitchRow>,
+        #[template_child]
         pub connect_button: TemplateChild<gtk::Button>,
         #[template_child]
         pub library_combo: TemplateChild<adw::ComboRow>,
@@ -513,6 +537,7 @@ mod imp {
     impl ObjectImpl for Setup {
         fn constructed(&self) {
             self.parent_constructed();
+            self.obj().setup_bindings();
             self.setup_signals();
         }
     }
