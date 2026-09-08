@@ -396,7 +396,7 @@ impl Jellyfin {
         );
         let stream_protocol = "hls";
         format!(
-            "{}/Audio/{item_id}/universal?api_key={}&userId={}&container={}&audioCodec={}&transcodingContainer={}&transcodingProtocol={}&maxStreamingBitrate={}",
+            "{}/Audio/{item_id}/universal?ApiKey={}&userId={}&container={}&audioCodec={}&transcodingContainer={}&transcodingProtocol={}&maxStreamingBitrate={}",
             self.host.trim_end_matches("/"),
             self.token,
             self.user_id,
