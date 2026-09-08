@@ -71,6 +71,25 @@
     <color type="primary" scheme_preference="dark">#325a4a</color>
   </branding>
   <releases>
+    <release version="1.12.0" date="2026-09-08">
+      <description>
+        <ul>
+          <li>
+            Updates for Jellyfin 12.
+          </li>
+          <li>
+            Added support for legacy subsonic authentication. This adds support for servers that
+            willfully do not support other auth methods, like Nextcloud Music.
+          </li>
+          <li>
+            General setup cleanup.
+          </li>
+          <li>
+            Translation updates.
+          </li>
+        </ul>
+      </description>
+    </release>
     <release version="1.11.1" date="2026-09-04">
       <description>
         <ul>
