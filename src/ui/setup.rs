@@ -72,13 +72,18 @@ impl Setup {
         }
     }
 
-    pub fn show_server_setup(&self) {
+    fn reset_server_form(&self) {
         let imp = self.imp();
         let host = settings().string("hostname");
         if !host.is_empty() {
             imp.host_entry.set_text(&host);
         }
         imp.password_entry.set_text("");
+    }
+
+    pub fn show_server_setup(&self) {
+        self.reset_server_form();
+        let imp = self.imp();
         imp.setup_navigation_view
             .replace(&[imp.setup_servers.get()]);
     }
@@ -86,7 +91,7 @@ impl Setup {
     pub fn show_library_setup(&self) {
         let imp = self.imp();
         imp.setup_navigation_view
-            .replace(&[imp.setup_library.get()]);
+            .replace(&[imp.setup_servers.get(), imp.setup_library.get()]);
         self.populate_library_list();
     }
 
@@ -505,8 +510,6 @@ mod imp {
         #[template_child]
         pub library_button: TemplateChild<gtk::Button>,
         #[template_child]
-        pub cancel_library_button: TemplateChild<gtk::Button>,
-        #[template_child]
         pub quick_connect_button: TemplateChild<gtk::Button>,
         #[template_child]
         pub cancel_quick_connect_button: TemplateChild<gtk::Button>,
@@ -577,11 +580,13 @@ mod imp {
                 }
             ));
 
-            self.cancel_library_button.connect_clicked(glib::clone!(
+            self.setup_navigation_view.connect_popped(glib::clone!(
                 #[weak(rename_to=imp)]
                 self,
-                move |_| {
-                    imp.obj().show_server_setup();
+                move |_, page| {
+                    if page == &imp.setup_library.get() {
+                        imp.obj().reset_server_form();
+                    }
                 }
             ));
 
