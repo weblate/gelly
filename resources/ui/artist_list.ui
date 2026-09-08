@@ -11,7 +11,7 @@
         <property name="child">
           <object class="GtkLabel" id="loading_label">
             <property name="visible" bind-source="GellyArtistList" bind-property="is-loading" />
-            <property name="label" translatable="yes">Performing initial library download, this may take a moment. The library will be cached for subsequent use.</property>
+            <property name="label" translatable="yes">Caching initial library download...</property>
           </object>
         </property>
       </object>
