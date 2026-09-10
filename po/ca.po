@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-21 17:56-0700\n"
+"POT-Creation-Date: 2026-09-07 17:15-0700\n"
 "PO-Revision-Date: 2026-08-18 23:51+0000\n"
 "Last-Translator: \"Ícar N. S.\" <icar.nin@pm.me>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/gelly/gelly/ca/"
@@ -67,7 +67,7 @@ msgstr "Afegeix a la llista de reproducció"
 
 #: src/ui/music_context_menu.rs:34 src/ui/music_context_menu.rs:87
 #: src/ui/playlist_dialogs.rs:20 src/ui/playlist_dialogs.rs:59
-#: src/ui/window.rs:189 resources/ui/setup.ui:123 resources/ui/setup.ui:186
+#: src/ui/window.rs:189 resources/ui/setup.ui:203
 msgid "Cancel"
 msgstr "Cancel·la"
 
@@ -121,6 +121,9 @@ msgstr "Pausa"
 
 #: src/ui/player_bar/common.rs:81 resources/ui/album_detail.ui:120
 #: resources/ui/artist_detail.ui:53 resources/ui/playlist_detail.ui:102
+#: resources/ui/player_bar/big_player.ui:143
+#: resources/ui/player_bar/compact_player_bar.ui:146
+#: resources/ui/player_bar/full_player_bar.ui:126
 msgid "Play"
 msgstr "Reprodueix"
 
@@ -224,42 +227,42 @@ msgstr "S'ha creat la llista de reproducció"
 msgid "Failed to create playlist"
 msgstr "No s'ha pogut crear la llista de reproducció"
 
-#: src/ui/setup.rs:153 src/ui/setup.rs:168 src/ui/setup.rs:398
+#: src/ui/setup.rs:180 src/ui/setup.rs:195 src/ui/setup.rs:425
 msgid "Credentials could not be saved. Do you have a keyring daemon running?"
 msgstr "Les credencials no s'han pogut desar. El clauer del sistema funciona?"
 
-#: src/ui/setup.rs:218
+#: src/ui/setup.rs:245
 msgid "Connection error. Please supply a full URL (http://example.com:8096)"
 msgstr ""
 "Error de connexió. Si us plau, proporcioneu la URL completa (http://"
 "exemple.cat:8096)"
 
-#: src/ui/setup.rs:232
+#: src/ui/setup.rs:259
 msgid "Invalid credentials"
 msgstr "Credencials no vàlides"
 
-#: src/ui/setup.rs:242
+#: src/ui/setup.rs:269
 msgid "Could not authenticate with Jellyfin or Subsonic"
 msgstr "No s'ha pogut autenticar amb el Jellyfin o el Subsonic"
 
-#: src/ui/setup.rs:287
+#: src/ui/setup.rs:314
 msgid "Failed to load libraries"
 msgstr "No s'han pogut carregar les llibreries"
 
-#: src/ui/setup.rs:317
+#: src/ui/setup.rs:344
 msgid "Failed to initiate quick connect. Is the host valid?"
 msgstr ""
 "No s'ha pogut iniciar la connexió ràpida. El nom d'amfitrió és correcte?"
 
-#: src/ui/setup.rs:372
+#: src/ui/setup.rs:399
 msgid "Error during quick connect"
 msgstr "La connexió ràpida ha fallat"
 
-#: src/ui/setup.rs:408
+#: src/ui/setup.rs:435
 msgid "Failed to authenticate with quick connect"
 msgstr "L'autenticació de la connexió ràpida ha fallat"
 
-#: src/ui/setup.rs:418
+#: src/ui/setup.rs:445
 msgid "Quick connect code copied to clipboard"
 msgstr "El codi de connexió ràpida s'ha copiat al porta-retalls"
 
@@ -408,13 +411,8 @@ msgid "No Albums"
 msgstr "Cap àlbum"
 
 #: resources/ui/album_list.ui:14 resources/ui/artist_list.ui:14
-msgid ""
-"Performing initial library download, this may take a moment. The library "
-"will be cached for subsequent use."
+msgid "Caching initial library download..."
 msgstr ""
-"S'està realitzant la baixada inicial de la llibreria, això pot trigar un "
-"moment. La llibreria s'emmagatzemarà a la memòria cau per al seu ús "
-"posterior."
 
 #: resources/ui/artist_detail.ui:41
 msgid "Artist Name"
@@ -561,15 +559,15 @@ msgstr "Res en reproducció"
 msgid "Jump to current song"
 msgstr "Vés a la cançó actual"
 
-#: resources/ui/setup.ui:10
+#: resources/ui/setup.ui:11
 msgid "Servers"
 msgstr "Servidors"
 
-#: resources/ui/setup.ui:19
+#: resources/ui/setup.ui:20
 msgid "Connect to Server"
 msgstr "Connecta't al servidor"
 
-#: resources/ui/setup.ui:20
+#: resources/ui/setup.ui:21
 msgid ""
 "Gelly supports Jellyfin and Subsonic/Navidrome. Enter the full server URL "
 "including protocol and port. For Jellyfin this is usually 8096, Navidrome "
@@ -579,55 +577,73 @@ msgstr ""
 "completa del servidor incloent-hi el protocol i el port. Pel Jellyfin "
 "acostuma a ser el 8096, i pel Navidrome el 4533."
 
-#: resources/ui/setup.ui:35
+#: resources/ui/setup.ui:36
 msgid "Host URL"
 msgstr "El URL de l'amfitrió"
 
-#: resources/ui/setup.ui:42
+#: resources/ui/setup.ui:43
 msgid "Username"
 msgstr "Nom d'usuari"
 
-#: resources/ui/setup.ui:47
+#: resources/ui/setup.ui:48
 msgid "Password"
 msgstr "Contrasenya"
 
-#: resources/ui/setup.ui:54
+#: resources/ui/setup.ui:61 resources/ui/setup.ui:222
+msgid "Advanced Settings"
+msgstr ""
+
+#: resources/ui/setup.ui:76
 msgid "Connect"
 msgstr "Connecta-t'hi"
 
-#: resources/ui/setup.ui:65 resources/ui/setup.ui:150
+#: resources/ui/setup.ui:87 resources/ui/setup.ui:167
 msgid "Jellyfin Quick Connect"
 msgstr "Connexió ràpida del Jellyfin"
 
-#: resources/ui/setup.ui:80
+#: resources/ui/setup.ui:104
 msgid "Choose Library"
 msgstr "Escolliu la biblioteca"
 
-#: resources/ui/setup.ui:89
+#: resources/ui/setup.ui:114
 msgid "Select Library"
 msgstr "Seleccioneu la biblioteca"
 
-#: resources/ui/setup.ui:90
+#: resources/ui/setup.ui:115
 msgid "Choose which library Gelly will use to load your music."
 msgstr ""
 "Escolliu quina biblioteca usarà el Gelly per carregar la vostra música."
 
-#: resources/ui/setup.ui:105
+#: resources/ui/setup.ui:130
 msgid "Library"
 msgstr "Biblioteca"
 
-#: resources/ui/setup.ui:112
+#: resources/ui/setup.ui:137
 msgid "Launch Gelly"
 msgstr "Inicia el Gelly"
 
-#: resources/ui/setup.ui:141
+#: resources/ui/setup.ui:158
 msgid "Quick Connect"
 msgstr "Connexió ràpida"
 
-#: resources/ui/setup.ui:151
+#: resources/ui/setup.ui:168
 msgid "Enter the code on the Jellyfin web page to complete authentication."
 msgstr ""
 "Introduïu el codi al lloc web del Jellyfin per completar l'autenticació."
+
+#: resources/ui/setup.ui:233
+msgid "Subsonic"
+msgstr ""
+
+#: resources/ui/setup.ui:236
+msgid "Legacy Authentication"
+msgstr ""
+
+#: resources/ui/setup.ui:237
+msgid ""
+"Required by specific servers that do not support token auth like Nextcloud "
+"Music."
+msgstr ""
 
 #: resources/ui/shortcuts_dialog.ui:9 resources/ui/window.ui:411
 msgid "Refresh Library"
@@ -795,6 +811,18 @@ msgstr "Quant al Gelly"
 msgid "Logout"
 msgstr "Tanca la sessió"
 
+#: resources/ui/player_bar/big_player.ui:133
+#: resources/ui/player_bar/compact_player_bar.ui:136
+#: resources/ui/player_bar/full_player_bar.ui:116
+msgid "Previous"
+msgstr ""
+
+#: resources/ui/player_bar/big_player.ui:152
+#: resources/ui/player_bar/compact_player_bar.ui:156
+#: resources/ui/player_bar/full_player_bar.ui:136
+msgid "Next"
+msgstr ""
+
 #: resources/ui/player_bar/big_player.ui:169
 #: resources/ui/player_bar/compact_player_bar.ui:110
 #: resources/ui/player_bar/full_player_bar.ui:198
@@ -816,6 +844,14 @@ msgstr "Volum"
 #: resources/ui/player_bar/full_player_bar.ui:232
 msgid "Song Menu"
 msgstr "Menú de la cançó"
+
+#~ msgid ""
+#~ "Performing initial library download, this may take a moment. The library "
+#~ "will be cached for subsequent use."
+#~ msgstr ""
+#~ "S'està realitzant la baixada inicial de la llibreria, això pot trigar un "
+#~ "moment. La llibreria s'emmagatzemarà a la memòria cau per al seu ús "
+#~ "posterior."
 
 #~ msgid ""
 #~ "Transcoding reduces stream quality and bandwidth at the expense of "

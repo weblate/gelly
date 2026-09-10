@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-21 17:56-0700\n"
+"POT-Creation-Date: 2026-09-07 17:15-0700\n"
 "PO-Revision-Date: 2026-06-02 18:16+0000\n"
 "Last-Translator: standard non <leaderkys@naver.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/gelly/gelly/ko/>\n"
@@ -69,7 +69,7 @@ msgstr "스마트 플레이리스트 목록"
 
 #: src/ui/music_context_menu.rs:34 src/ui/music_context_menu.rs:87
 #: src/ui/playlist_dialogs.rs:20 src/ui/playlist_dialogs.rs:59
-#: src/ui/window.rs:189 resources/ui/setup.ui:123 resources/ui/setup.ui:186
+#: src/ui/window.rs:189 resources/ui/setup.ui:203
 msgid "Cancel"
 msgstr ""
 
@@ -129,6 +129,9 @@ msgstr ""
 
 #: src/ui/player_bar/common.rs:81 resources/ui/album_detail.ui:120
 #: resources/ui/artist_detail.ui:53 resources/ui/playlist_detail.ui:102
+#: resources/ui/player_bar/big_player.ui:143
+#: resources/ui/player_bar/compact_player_bar.ui:146
+#: resources/ui/player_bar/full_player_bar.ui:126
 #, fuzzy
 #| msgid "Playback"
 msgid "Play"
@@ -245,39 +248,39 @@ msgstr "플레이리스트 상세정보"
 msgid "Failed to create playlist"
 msgstr "스마트 플레이리스트"
 
-#: src/ui/setup.rs:153 src/ui/setup.rs:168 src/ui/setup.rs:398
+#: src/ui/setup.rs:180 src/ui/setup.rs:195 src/ui/setup.rs:425
 msgid "Credentials could not be saved. Do you have a keyring daemon running?"
 msgstr ""
 
-#: src/ui/setup.rs:218
+#: src/ui/setup.rs:245
 msgid "Connection error. Please supply a full URL (http://example.com:8096)"
 msgstr ""
 
-#: src/ui/setup.rs:232
+#: src/ui/setup.rs:259
 msgid "Invalid credentials"
 msgstr ""
 
-#: src/ui/setup.rs:242
+#: src/ui/setup.rs:269
 msgid "Could not authenticate with Jellyfin or Subsonic"
 msgstr ""
 
-#: src/ui/setup.rs:287
+#: src/ui/setup.rs:314
 msgid "Failed to load libraries"
 msgstr ""
 
-#: src/ui/setup.rs:317
+#: src/ui/setup.rs:344
 msgid "Failed to initiate quick connect. Is the host valid?"
 msgstr ""
 
-#: src/ui/setup.rs:372
+#: src/ui/setup.rs:399
 msgid "Error during quick connect"
 msgstr ""
 
-#: src/ui/setup.rs:408
+#: src/ui/setup.rs:435
 msgid "Failed to authenticate with quick connect"
 msgstr ""
 
-#: src/ui/setup.rs:418
+#: src/ui/setup.rs:445
 msgid "Quick connect code copied to clipboard"
 msgstr ""
 
@@ -430,9 +433,7 @@ msgid "No Albums"
 msgstr "앨범 목록"
 
 #: resources/ui/album_list.ui:14 resources/ui/artist_list.ui:14
-msgid ""
-"Performing initial library download, this may take a moment. The library "
-"will be cached for subsequent use."
+msgid "Caching initial library download..."
 msgstr ""
 
 #: resources/ui/artist_detail.ui:41
@@ -590,15 +591,15 @@ msgstr ""
 msgid "Jump to current song"
 msgstr ""
 
-#: resources/ui/setup.ui:10
+#: resources/ui/setup.ui:11
 msgid "Servers"
 msgstr "서버"
 
-#: resources/ui/setup.ui:19
+#: resources/ui/setup.ui:20
 msgid "Connect to Server"
 msgstr "서버에 연결"
 
-#: resources/ui/setup.ui:20
+#: resources/ui/setup.ui:21
 msgid ""
 "Gelly supports Jellyfin and Subsonic/Navidrome. Enter the full server URL "
 "including protocol and port. For Jellyfin this is usually 8096, Navidrome "
@@ -608,56 +609,74 @@ msgstr ""
 "함한 URL을 입력하세요. 포트 번호는 Jellyfin의 경우 보통 8096, Navidrome은 "
 "4533을 사용합니다."
 
-#: resources/ui/setup.ui:35
+#: resources/ui/setup.ui:36
 msgid "Host URL"
 msgstr ""
 
-#: resources/ui/setup.ui:42
+#: resources/ui/setup.ui:43
 msgid "Username"
 msgstr ""
 
-#: resources/ui/setup.ui:47
+#: resources/ui/setup.ui:48
 msgid "Password"
 msgstr ""
 
-#: resources/ui/setup.ui:54
+#: resources/ui/setup.ui:61 resources/ui/setup.ui:222
+msgid "Advanced Settings"
+msgstr ""
+
+#: resources/ui/setup.ui:76
 msgid "Connect"
 msgstr ""
 
-#: resources/ui/setup.ui:65 resources/ui/setup.ui:150
+#: resources/ui/setup.ui:87 resources/ui/setup.ui:167
 msgid "Jellyfin Quick Connect"
 msgstr ""
 
-#: resources/ui/setup.ui:80
+#: resources/ui/setup.ui:104
 #, fuzzy
 #| msgid "Library"
 msgid "Choose Library"
 msgstr "라이브러리"
 
-#: resources/ui/setup.ui:89
+#: resources/ui/setup.ui:114
 msgid "Select Library"
 msgstr "라이브러리 선택"
 
-#: resources/ui/setup.ui:90
+#: resources/ui/setup.ui:115
 msgid "Choose which library Gelly will use to load your music."
 msgstr "Gelly가 곡을 불러올 대상 라이브러리를 선택하세요."
 
-#: resources/ui/setup.ui:105
+#: resources/ui/setup.ui:130
 msgid "Library"
 msgstr "라이브러리"
 
-#: resources/ui/setup.ui:112
+#: resources/ui/setup.ui:137
 #, fuzzy
 #| msgid "About Gelly"
 msgid "Launch Gelly"
 msgstr "Gelly 정보"
 
-#: resources/ui/setup.ui:141
+#: resources/ui/setup.ui:158
 msgid "Quick Connect"
 msgstr ""
 
-#: resources/ui/setup.ui:151
+#: resources/ui/setup.ui:168
 msgid "Enter the code on the Jellyfin web page to complete authentication."
+msgstr ""
+
+#: resources/ui/setup.ui:233
+msgid "Subsonic"
+msgstr ""
+
+#: resources/ui/setup.ui:236
+msgid "Legacy Authentication"
+msgstr ""
+
+#: resources/ui/setup.ui:237
+msgid ""
+"Required by specific servers that do not support token auth like Nextcloud "
+"Music."
 msgstr ""
 
 #: resources/ui/shortcuts_dialog.ui:9 resources/ui/window.ui:411
@@ -839,6 +858,18 @@ msgstr "Gelly 정보"
 #: resources/ui/window.ui:437
 msgid "Logout"
 msgstr "로그아웃"
+
+#: resources/ui/player_bar/big_player.ui:133
+#: resources/ui/player_bar/compact_player_bar.ui:136
+#: resources/ui/player_bar/full_player_bar.ui:116
+msgid "Previous"
+msgstr ""
+
+#: resources/ui/player_bar/big_player.ui:152
+#: resources/ui/player_bar/compact_player_bar.ui:156
+#: resources/ui/player_bar/full_player_bar.ui:136
+msgid "Next"
+msgstr ""
 
 #: resources/ui/player_bar/big_player.ui:169
 #: resources/ui/player_bar/compact_player_bar.ui:110
