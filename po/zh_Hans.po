@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-21 17:56-0700\n"
-"PO-Revision-Date: 2026-07-28 08:01+0000\n"
+"PO-Revision-Date: 2026-09-10 21:02+0000\n"
 "Last-Translator: sendevia <me@sendevia.top>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/"
 "projects/gelly/gelly/zh_Hans/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.8.dev0\n"
+"X-Generator: Weblate 2026.9.1\n"
 
 #: src/ui/album_detail.rs:35
 msgid "N/A"
@@ -359,22 +359,16 @@ msgid "Remote Properties"
 msgstr "远程属性"
 
 #: src/ui/window.rs:188 resources/ui/window.ui:415
-#, fuzzy
-#| msgid "Choose Library"
 msgid "Change Library"
-msgstr "选择曲库"
+msgstr "更改曲库"
 
 #: src/ui/window.rs:189
-#, fuzzy
-#| msgid "Play Selected"
 msgid "Select"
-msgstr "播放选中"
+msgstr "选择"
 
 #: src/ui/window.rs:221
-#, fuzzy
-#| msgid "Failed to load libraries"
 msgid "Failed to fetch libraries"
-msgstr "无法加载音乐库"
+msgstr "无法获取曲库"
 
 #: src/ui/window.rs:231
 msgid "Logged out"
@@ -382,7 +376,7 @@ msgstr "登出"
 
 #: src/ui/window.rs:359
 msgid "all genres"
-msgstr "所有类型"
+msgstr "所有风格"
 
 #: resources/ui/album_art.ui:33
 msgid "Missing album art"
@@ -706,7 +700,7 @@ msgstr "显示队列"
 
 #: resources/ui/window.ui:160
 msgid "Search and Genres"
-msgstr "搜索与类型"
+msgstr "搜索与歌曲风格"
 
 #: resources/ui/window.ui:166
 msgid "Sort"
