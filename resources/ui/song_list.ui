@@ -48,11 +48,18 @@
                 <property name="vscrollbar-policy">automatic</property>
                 <property name="has-frame">false</property>
                 <property name="vexpand">true</property>
+                <property name="overflow">hidden</property>
+                <property name="visible" bind-source="track_list" bind-property="visible" bind-flags="sync-create" />
+                <style>
+                  <class name="card" />
+                  <class name="track-list-card" />
+                </style>
                 <property name="child">
                   <object class="GtkListView" id="track_list">
                     <property name="width-request">300</property>
+                    <property name="show-separators">true</property>
                     <style>
-                      <class name="boxed-list" />
+                      <class name="boxed-track-list" />
                     </style>
                   </object>
                 </property>

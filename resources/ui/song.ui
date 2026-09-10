@@ -3,6 +3,16 @@
   <requires lib="gtk" version="4.0"/>
   <template class="GellySong" parent="GtkBox">
     <child>
+      <object class="GtkBox">
+        <property name="valign">center</property>
+        <property name="margin-end">2</property>
+        <property name="can-target">false</property>
+        <style>
+          <class name="playing-indicator"/>
+        </style>
+      </object>
+    </child>
+    <child>
       <object class="GtkBox" id="box1">
         <property name="focusable">False</property>
         <property name="spacing">6</property>

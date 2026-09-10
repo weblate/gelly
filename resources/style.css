@@ -2,10 +2,28 @@
     padding: 12px;
 }
 
+.song:dir(ltr) {
+    padding-left: 6px;
+}
+
+.song:dir(rtl) {
+    padding-right: 6px;
+}
+
 .song-playing {
-    border-left: 4px solid @theme_selected_bg_color;
     background-color: alpha(@theme_selected_bg_color, 0.08);
-    padding-left: 7px; /* 12 minus border-left */
+}
+
+.playing-indicator {
+    min-width: 4px;
+    min-height: 24px;
+    border-radius: 999px;
+    background-color: @theme_selected_bg_color;
+    opacity: 0;
+}
+
+.song-playing > .playing-indicator {
+    opacity: 1;
 }
 
 progressbar.osd {
@@ -45,11 +63,27 @@ listview.boxed-list > row:hover {
     background-color: alpha(currentColor, 0.05);
 }
 
+/* For the scrolling cards */
+listview.boxed-track-list:not(.card) {
+    background-color: transparent;
+    color: inherit;
+}
+
+listview.boxed-track-list > row:not(:selected).activatable:hover,
+listview.boxed-track-list > row:not(:selected).activatable.has-open-popup {
+    background-color: alpha(currentColor, 0.03);
+}
+
+listview.boxed-track-list > row:not(:selected).activatable:active {
+    background-color: alpha(currentColor, 0.08);
+}
+
 .album-art-background .sidebar-pane {
     background: transparent;
 }
 
-.album-art-background listview.boxed-list {
+.album-art-background listview.boxed-list,
+.album-art-background .track-list-card {
     background-color: color-mix(in oklab, @card_bg_color 60%, transparent 40%);
 }
 
